@@ -1,0 +1,58 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    
+    margin: 1rem;
+}
+
+.box {
+
+    background: #bdbdbd;
+    border: 2px solid #333;
+    padding: 10px;
+}
+
+.container {
+
+    display: grid;
+    height: 100vh;
+    grid-template-columns:  repeat(3, 1fr); /* Propiedade do grid: Cria colunas*/
+    grid-gap: 10px;  
+    /* grid-column-gap: 10px;           Cria margem somente entre as colunas    */
+    /* grid-row-gap: 10px;               cria uma margem somente entre as linhas */
+    grid-auto-rows: 200px;   /* Define a altura das linhas */
+    grid-template-areas: 
+        'box-1 box-1 box-1'
+        'box-2 box-2 box-3'
+        'box-2 box-2 box-3'
+        'box-2 box-2 box-3'
+        'box-4 box-4 box-4'
+}
+
+.box-1 {
+
+    grid-area: box-1;
+    text-align: center;
+}
+
+.box-2 {
+
+    grid-area: box-2;
+}
+
+.box-3 {
+
+    grid-area: box-3;
+}
+
+.box-4 {
+
+    grid-area: box-4;
+    text-align: center;
+
+}
+
